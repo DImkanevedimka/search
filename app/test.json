@@ -1,0 +1,8 @@
+[
+ 	{value: "Одесса", iata: "ODS", country:'Украина'},
+        {value: "Киев", iata: "IEV", country:'Украина'},
+        {value: "Львов", iata: "LWO", country:'Украина'},
+        {value: "Москва", iata: "MOW", country:'Россия'},
+        {value: "Казань", iata: "KZN", country:'Россия'},
+        {value: "Питер", iata: "LED", country:'Россия'}
+ ]

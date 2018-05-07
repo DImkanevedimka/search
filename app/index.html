@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/reset.css">
+	<link rel="stylesheet" href="./libs/datepicker/datepicker.min.css">
+	<link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+	<main class="main">
+		<div class="main-content">
+			<form action="#" class="form aviaSelesKPD"> 
+				<div class="form-input-cities">
+					<div class="input-container replace-3">
+						<input type="text" class="city-autocomplete city-to-input form__input-text" required>
+						<span class="input-container__placeholder country-to" data-placeholder='Откуда'>Откуда</span>
+						<span class="form-iata city-to"></span>
+					</div>
+					<input type="button" class="replace-2 form__input-button js-input-replace" value='replace'>
+					<div class="input-container replace-1">
+						<input type="text" class="city-autocomplete city-from-input form__input-text form__divinder form__input-text__size-big" required>
+						<span class="input-container__placeholder country-from" data-placeholder='Куда'>Куда</span>
+						<span class="form-iata city-from"></span>
+					</div>
+				</div>
+				<div class="form-input-dates">
+					<div class="input-container datepicker-container-date-to">
+						<input type="text" class="date-active date-to form__input-text form__divinder" placeholder="Когда" readonly>
+						<div class="datepicker-date-to-container">
+							<div class="date-to-header">
+								<span>Дата вылета</span>
+								<div class="close-form-button js-close-button">
+									<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><polygon fill='#75326e;' points="10 4 6 4 6 0 4 0 4 4 0 4 0 6 4 6 4 10 6 10 6 6 10 6 10 4"/></svg>
+								</div>
+							</div>
+							<div id='date-to'></div>
+						</div>
+					</div>
+					<div class="datepicker-container">
+						<input type="text" class="date-active date-from form__input-text form__divinder" placeholder="Обратно" readonly>
+						<div class="datepicker-date-from-container">
+							<div class="date-from-header">
+								<span>Дата возвращения</span>
+								<div class="close-form-button js-close-button">
+									<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><polygon fill='#75326e;' points="10 4 6 4 6 0 4 0 4 4 0 4 0 6 4 6 4 10 6 10 6 6 10 6 10 4"/></svg>
+								</div>
+							</div>
+							<div id='date-from'></div>
+							<a href="#" class="no-ticket-button js-no-ticket">Обратный билет не нужен</a>
+						</div>
+					</div>
+				</div>
+				<div class="form-submit-total">
+					<div class="ticket form__divinder">
+						<span class="ticket__type">Эконом</span>
+						<span class="ticket__amount">8 пассажиров</span>
+						<div class="ticket-counter">
+							<i class="counter-pointer"></i>
+							<div class="ticket__header date-from-header">
+								<span>Количество пассажиров</span>
+								<div class="close-form-button js-close-button">
+									<svg id="Layer_3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><polygon fill='#75326e;' points="10 4 6 4 6 0 4 0 4 4 0 4 0 6 4 6 4 10 6 10 6 6 10 6 10 4"/></svg>
+								</div>
+							</div>
+							<div class="ticket-counter__item">
+								<div class="ticket-counter__label">
+									<div class="ticket-counter__icon">
+										<svg id="Layer_4" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 30">
+											<path fill="#53525f" d="M6,0A3,3,0,1,1,3,3,3,3,0,0,1,6,0ZM3,27.06A2.94,2.94,0,0,0,5.94,30h.12A2.94,2.94,0,0,0,9,27.06V17.75a3,3,0,0,0,3-2.94V9.94A2.94,2.94,0,0,0,9.06,7H2.94A2.93,2.93,0,0,0,0,9.94v4.87a3,3,0,0,0,3,2.94Z"/>
+										</svg>
+									</div>
+									<span class="ticket-counter__type"> Взрослые</span>
+								</div>
+								<div class="counter-buttons">
+									<a href="#" class="counter-button js-counter-minus">	
+										<svg id="Layer_5" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><rect fill='#75326e;' y="4" width="10" height="2"/></svg>
+									</a>
+									<input type="text" value="1" readonly class="counter-value ticketType1">
+									<a href="#" class="counter-button js-counter-plus">
+										<svg id="Layer_6" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><polygon fill='#75326e;' points="10 4 6 4 6 0 4 0 4 4 0 4 0 6 4 6 4 10 6 10 6 6 10 6 10 4"/></svg>
+									</a>
+								</div>
+							</div>
+							<div class="ticket-counter__item ticket-counter__item_margin-bottom">
+								<div class="ticket-counter__label">
+									<div class="ticket-counter__icon">
+										<svg id="Layer_5.1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 30">
+											<path fill="#53525f" d="M3,3A3,3,0,1,1,6,6,3,3,0,0,1,3,3ZM9.06,7H2.94A2.94,2.94,0,0,0,0,9.94v3.87a3,3,0,0,0,3,2.94v6.31A2.94,2.94,0,0,0,5.94,26h.12A2.94,2.94,0,0,0,9,23.06V16.75a3,3,0,0,0,3-2.94V9.94A2.94,2.94,0,0,0,9.06,7Z"/>
+										</svg>
+									</div>
+									<span class="ticket-counter__type"> Дети до 12 лет</span>
+								</div>
+								<div class="counter-buttons">
+									<a href="#" class="counter-button js-counter-minus">	
+										<svg id="Layer_7" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><rect fill='#75326e;' y="4" width="10" height="2"/></svg>
+									</a>
+									<input type="text" value="0" readonly class="counter-value ticketType2">
+									<a href="#" class="counter-button js-counter-plus">
+										<svg id="Layer_8" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><polygon fill='#75326e;' points="10 4 6 4 6 0 4 0 4 4 0 4 0 6 4 6 4 10 6 10 6 6 10 6 10 4"/></svg>
+									</a>
+								</div>
+							</div>
+							<div class="ticket-counter__item">
+								<div class="ticket-counter__label">
+									<div class="ticket-counter__icon ticket-counter__icon_padding-top">
+										<svg id="Layer_9" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 30">
+											<path fill="#53525f" d="M3,3A3,3,0,1,1,6,6,3,3,0,0,1,3,3ZM3,15v4.06A2.94,2.94,0,0,0,5.94,22h.12A2.94,2.94,0,0,0,9,19.06V15L6,16ZM9.06,7H2.94A2.93,2.93,0,0,0,0,9.94v1.87a3,3,0,0,0,3,2.94V12H9v2.75a3,3,0,0,0,3-2.94V9.94A2.94,2.94,0,0,0,9.06,7Z"/>
+										</svg>
+									</div>
+									<span class="ticket-counter__type">Дети до 2 лет (без места)</span>
+								</div>
+								<div class="counter-buttons">
+									<a href="#" class="counter-button js-counter-minus">	
+										<svg id="Layer_10" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><rect fill='#75326e;' y="4" width="10" height="2"/></svg>
+									</a>
+									<input type="text" value="0" readonly class="counter-value ticketType3">
+									<a href="#" class="counter-button js-counter-plus">
+										<svg id="Layer_11" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10"><polygon fill='#75326e;' points="10 4 6 4 6 0 4 0 4 4 0 4 0 6 4 6 4 10 6 10 6 6 10 6 10 4"/></svg>
+									</a>
+								</div>
+							</div>
+							<div class="ticket-type-buttons">
+								<a href="#" class="ticket-type-button js-ticket-type selected">Эконом</a>
+								<a href="#" class="ticket-type-button js-ticket-type">Бизнес</a>
+							</div>
+						</div>
+					</div>
+					<button type="submit" class="form__submit"></button>
+				</div>
+			</form>
+			<div class="content-text">
+				<div class="fast-select-container">
+					<div class="fast-select" data-direction='to'>
+						<a class="fast-select__item" href="#" data-iata='MOW' data-country='Россия'>Москва</a>
+						<a class="fast-select__item" href="#" data-iata='KZN' data-country='Россия'>Казань</a>
+						<a class="fast-select__item" href="#" data-iata='LED' data-country='Россия'>Питер</a>
+					</div>
+					<div class="fast-select fast-select_margin-left" data-direction = 'from'>
+						<a class="fast-select__item" href="#" data-iata='MOW' data-country='Россия'>Москва</a>
+						<a class="fast-select__item" href="#" data-iata='KZN' data-country='Россия'>Казань</a>
+						<a class="fast-select__item" href="#" data-iata='LED' data-country='Россия'>Питер</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="overlay"></div>
+	</main>
+	<script src="./libs/jquery-3.2.1.min.js"></script>
+	<script src="./libs/datepicker/datepicker.min.js"></script>
+	<script src="./libs/jquery.autocomplete.min.js"></script>
+	<script src="./js/main.js"></script>
+</body>
+</html>
